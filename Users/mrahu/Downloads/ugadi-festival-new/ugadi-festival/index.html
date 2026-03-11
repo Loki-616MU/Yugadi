@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugadi — The Dawn of Creation | उगादि</title>
+    <meta name="description"
+        content="Experience the cosmic origins of Ugadi through an immersive storytelling journey. From Vishnu's cosmic slumber through the battle for creation to the celebration of new beginnings.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════ INVITATION SPLASH SCREEN ═══════════════════ -->
+    <div class="invitation-splash" id="invitation-splash">
+        <!-- Garland Decoration -->
+        <div class="garland-decoration">
+            <svg class="garland-svg" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="garlandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#ff9800" />
+                        <stop offset="25%" style="stop-color:#ffd54f" />
+                        <stop offset="50%" style="stop-color:#ff9800" />
+                        <stop offset="75%" style="stop-color:#ffd54f" />
+                        <stop offset="100%" style="stop-color:#ff9800" />
+                    </linearGradient>
+                </defs>
+                <!-- Main garland swoop -->
+                <path d="M0,10 Q150,90 300,40 Q450,90 600,40 Q750,90 900,40 Q1050,90 1200,10" stroke="url(#garlandGrad)"
+                    stroke-width="6" fill="none" stroke-linecap="round" />
+                <!-- Flower dots along garland -->
+                <circle cx="75" cy="45" r="8" fill="#e91e63" opacity="0.9" />
+                <circle cx="150" cy="70" r="6" fill="#ffd54f" opacity="0.9" />
+                <circle cx="225" cy="55" r="7" fill="#ff5722" opacity="0.8" />
+                <circle cx="300" cy="40" r="8" fill="#e91e63" opacity="0.9" />
+                <circle cx="375" cy="55" r="6" fill="#ffd54f" opacity="0.9" />
+                <circle cx="450" cy="70" r="7" fill="#ff5722" opacity="0.8" />
+                <circle cx="525" cy="55" r="8" fill="#e91e63" opacity="0.9" />
+                <circle cx="600" cy="40" r="6" fill="#ffd54f" opacity="0.9" />
+                <circle cx="675" cy="55" r="7" fill="#ff5722" opacity="0.8" />
+                <circle cx="750" cy="70" r="8" fill="#e91e63" opacity="0.9" />
+                <circle cx="825" cy="55" r="6" fill="#ffd54f" opacity="0.9" />
+                <circle cx="900" cy="40" r="7" fill="#ff5722" opacity="0.8" />
+                <circle cx="975" cy="55" r="8" fill="#e91e63" opacity="0.9" />
+                <circle cx="1050" cy="70" r="6" fill="#ffd54f" opacity="0.9" />
+                <circle cx="1125" cy="45" r="7" fill="#ff5722" opacity="0.8" />
+                <!-- Hanging elements -->
+                <line x1="150" y1="70" x2="150" y2="95" stroke="#ffd54f" stroke-width="1.5" />
+                <circle cx="150" cy="100" r="5" fill="#e91e63" />
+                <line x1="450" y1="70" x2="450" y2="100" stroke="#ffd54f" stroke-width="1.5" />
+                <circle cx="450" cy="105" r="5" fill="#ff9800" />
+                <line x1="750" y1="70" x2="750" y2="95" stroke="#ffd54f" stroke-width="1.5" />
+                <circle cx="750" cy="100" r="5" fill="#e91e63" />
+                <line x1="1050" y1="70" x2="1050" y2="100" stroke="#ffd54f" stroke-width="1.5" />
+                <circle cx="1050" cy="105" r="5" fill="#ff9800" />
+            </svg>
+        </div>
+
+        <!-- Mango Leaf Decorations (Left) -->
+        <div class="mango-leaves mango-left">
+            <svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+                <g transform="rotate(-15, 60, 100)">
+                    <path d="M60,180 Q55,120 60,20 Q70,80 80,20 Q75,120 60,180" fill="#2e7d32" opacity="0.9" />
+                    <path d="M60,180 Q50,130 40,30 Q55,90 60,180" fill="#388e3c" opacity="0.8" />
+                    <path d="M60,180 Q65,130 85,40 Q70,100 60,180" fill="#43a047" opacity="0.7" />
+                    <line x1="60" y1="180" x2="60" y2="20" stroke="#1b5e20" stroke-width="1.5" opacity="0.5" />
+                    <!-- Small mango fruit -->
+                    <ellipse cx="50" cy="50" rx="12" ry="16" fill="#fdd835" transform="rotate(20,50,50)" />
+                    <ellipse cx="50" cy="45" rx="4" ry="6" fill="#f9a825" transform="rotate(20,50,45)" opacity="0.5" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- Mango Leaf Decorations (Right) -->
+        <div class="mango-leaves mango-right">
+            <svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+                <g transform="rotate(15, 60, 100)">
+                    <path d="M60,180 Q55,120 60,20 Q70,80 80,20 Q75,120 60,180" fill="#2e7d32" opacity="0.9" />
+                    <path d="M60,180 Q50,130 40,30 Q55,90 60,180" fill="#388e3c" opacity="0.8" />
+                    <path d="M60,180 Q65,130 85,40 Q70,100 60,180" fill="#43a047" opacity="0.7" />
+                    <line x1="60" y1="180" x2="60" y2="20" stroke="#1b5e20" stroke-width="1.5" opacity="0.5" />
+                    <ellipse cx="75" cy="55" rx="12" ry="16" fill="#fdd835" transform="rotate(-10,75,55)" />
+                    <ellipse cx="75" cy="50" rx="4" ry="6" fill="#f9a825" transform="rotate(-10,75,50)" opacity="0.5" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- Invitation Card Content -->
+        <div class="invitation-card">
+            <div class="invitation-om">ॐ</div>
+            <h1 class="invitation-title">We invite you to</h1>
+            <h2 class="invitation-festival">Ugadi '26<br>Celebration</h2>
+            <div class="invitation-divider">
+                <span></span><span>✦</span><span></span>
+            </div>
+            <p class="invitation-by">by <strong>Ugadi Team</strong></p>
+            <p class="invitation-note">Recommended: Laptop for Better Experience</p>
+
+
+            <button class="invitation-cta" id="begin-journey">
+                <span>Begin the Journey</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══════════════════ LOADING SCREEN ═══════════════════ -->
+    <div class="loader" id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring ring-2"></div>
+        <div class="loader-ring ring-3"></div>
+        <div class="loader-symbol">ॐ</div>
+        <p class="loader-text">The story of creation begins…</p>
+    </div>
+
+    <!-- ═══════════════════ FLOATING NAVIGATION ═══════════════════ -->
+    <nav class="floating-nav" id="floating-nav">
+        <a href="#cosmic-ocean" class="nav-dot active" data-label="Cosmic Ocean"><span></span></a>
+        <a href="#vedas-stolen" class="nav-dot" data-label="Vedas Stolen"><span></span></a>
+        <a href="#matsya-avatar" class="nav-dot" data-label="Matsya Avatar"><span></span></a>
+        <a href="#creation-begins" class="nav-dot" data-label="Creation — Ugadi"><span></span></a>
+        <a href="#yugas-transition" class="nav-dot" data-label="The Yugas"><span></span></a>
+        <a href="#ugadi-meaning" class="nav-dot" data-label="Meaning"><span></span></a>
+        <a href="#natures-renewal" class="nav-dot" data-label="Nature's Renewal"><span></span></a>
+        <a href="#ugadi-pachadi" class="nav-dot" data-label="Ugadi Pachadi"><span></span></a>
+        <a href="#events-gateway" class="nav-dot" data-label="Celebrate"><span></span></a>
+    </nav>
+
+    <!-- ═══════════════════ SCROLL PROGRESS BAR ═══════════════════ -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION 1: COSMIC OCEAN — VISHNU'S SLUMBER                    -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="cosmic-ocean" class="story-section section-cosmic">
+        <div class="intro-overlay"></div>
+        <!-- Cosmic Ocean Background Video -->
+        <video class="cosmic-bg-video" id="cosmic-video" muted playsinline preload="auto" loop>
+            <source src="Shot_1.mp4" type="video/mp4">
+        </video>
+        <canvas id="stars-canvas" class="bg-canvas"></canvas>
+        <div class="cosmic-ocean-waves">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave wave-1">
+                <path d="M0,160 C360,220 720,100 1440,180 L1440,320 L0,320 Z" fill="rgba(72,61,139,0.3)" />
+            </svg>
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave wave-2">
+                <path d="M0,200 C480,120 960,280 1440,160 L1440,320 L0,320 Z" fill="rgba(25,25,112,0.4)" />
+            </svg>
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave wave-3">
+                <path d="M0,240 C320,180 640,300 960,200 C1280,100 1440,240 1440,240 L1440,320 L0,320 Z"
+                    fill="rgba(10,14,39,0.6)" />
+            </svg>
+        </div>
+
+        <!-- Story Text -->
+        <div class="story-content">
+            <span class="chapter-number">Chapter I</span>
+            <h1 class="section-title cosmic-title">The Cosmic Ocean</h1>
+            <div class="story-text-block glass-panel">
+                <p class="lead-text">In the infinite cosmic ocean of milk, <strong>Lord Vishnu</strong> sleeps in divine
+                    slumber upon the great serpent <em>Adishesha</em>, the thousand-headed guardian of the cosmos.</p>
+                <p>From His navel, a magnificent <span class="highlight-gold">golden lotus</span> blooms, rising through
+                    the primordial waters towards the infinite sky.</p>
+            </div>
+            <div class="subtitle-banner" id="subtitle-1">
+                <p class="subtitle-text"> <strong>Brahma awakens</strong> and begins the creation of the universe —
+                    <span class="highlight-saffron">the Kalpa Day</span>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION 2: VEDAS STOLEN — HAYAGRĪVA'S TREACHERY               -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="vedas-stolen" class="story-section section-danger">
+        <div class="danger-particles" id="danger-particles"></div>
+        <div class="section-bg-art">
+            <!-- Demon Silhouette -->
+            <svg class="demon-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="demonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#b71c1c" />
+                        <stop offset="100%" style="stop-color:#1a0000" />
+                    </linearGradient>
+                    <filter id="demonGlow">
+                        <feGaussianBlur stdDeviation="5" result="blur" />
+                        <feFlood flood-color="#ff1744" flood-opacity="0.4" />
+                        <feComposite in2="blur" operator="in" />
+                        <feMerge>
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+                <!-- Horse-headed demon -->
+                <g filter="url(#demonGlow)" class="demon-figure">
+                    <!-- Body -->
+                    <path
+                        d="M150,480 L160,350 Q170,300 200,280 L200,250 Q180,220 200,200 L190,180 Q200,150 220,140 L240,130 Q260,120 250,100 L260,80 Q250,50 270,40 L280,60 Q290,40 300,55"
+                        fill="url(#demonGrad)" opacity="0.9" />
+                    <!-- Horse head shape -->
+                    <path d="M250,100 Q270,60 290,50 Q310,45 300,70 Q320,55 310,80 Q300,90 280,100 Q260,110 250,100"
+                        fill="#b71c1c" />
+                    <!-- Glowing eyes -->
+                    <circle cx="280" cy="72" r="5" fill="#ff5252" class="demon-eye" />
+                    <circle cx="280" cy="72" r="2" fill="#fff" />
+                    <!-- Stolen Vedas (glowing scrolls) -->
+                    <g class="stolen-vedas">
+                        <rect x="160" y="300" width="30" height="12" rx="3" fill="#ffd54f"
+                            transform="rotate(-20,175,306)" class="veda-scroll" />
+                        <rect x="170" y="320" width="25" height="10" rx="3" fill="#ffb300"
+                            transform="rotate(10,182,325)" class="veda-scroll" />
+                        <rect x="155" y="280" width="28" height="11" rx="3" fill="#ffe082"
+                            transform="rotate(-5,169,285)" class="veda-scroll" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <div class="story-content">
+            <span class="chapter-number danger-text">Chapter II</span>
+            <h1 class="section-title danger-title">The Vedas Are Stolen</h1>
+            <div class="story-text-block glass-panel-dark">
+                <p class="lead-text">Before Brahma fully awakens, the fearsome Asura <strong
+                        class="danger-text">Hayagrīva</strong> — the horse-headed demon — steals the sacred <span
+                        class="highlight-gold">Vedas</span> from Brahma's grasp.</p>
+                <p>Without the Vedas, the <em>blueprints of existence itself</em>, the creation of the universe becomes
+                    impossible.</p>
+            </div>
+            <div class="alert-banner">
+                <div class="alert-icon">⚠</div>
+                <p><strong>Creation is at risk.</strong> The cosmic order hangs in the balance. Without divine
+                    knowledge, the universe cannot be born.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION 3: MATSYA AVATAR — THE COSMIC RESCUE                  -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="matsya-avatar" class="story-section section-ocean">
+        <div class="underwater-bubbles" id="underwater-bubbles"></div>
+        <div class="light-rays"></div>
+        <div class="section-bg-art">
+            <!-- Matsya Avatar SVG -->
+            <svg class="matsya-svg" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="fishGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffd54f" />
+                        <stop offset="40%" style="stop-color:#ff8f00" />
+                        <stop offset="100%" style="stop-color:#e65100" />
+                    </linearGradient>
+                    <linearGradient id="finGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffb300;stop-opacity:0.9" />
+                        <stop offset="100%" style="stop-color:#ff6f00;stop-opacity:0.6" />
+                    </linearGradient>
+                    <filter id="divineGlow">
+                        <feGaussianBlur stdDeviation="4" result="blur" />
+                        <feFlood flood-color="#ffd54f" flood-opacity="0.5" />
+                        <feComposite in2="blur" operator="in" />
+                        <feMerge>
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+                <g class="matsya-figure" filter="url(#divineGlow)">
+                    <!-- Fish Body -->
+                    <ellipse cx="300" cy="200" rx="160" ry="70" fill="url(#fishGrad)" />
+                    <!-- Head -->
+                    <path d="M440,200 Q500,170 520,200 Q500,230 440,200" fill="url(#fishGrad)" />
+                    <!-- Tail -->
+                    <path d="M140,200 Q100,140 80,120 Q110,180 80,280 Q100,260 140,200" fill="url(#finGrad)" />
+                    <!-- Dorsal Fin -->
+                    <path d="M250,130 Q300,60 370,130" fill="url(#finGrad)" />
+                    <!-- Pectoral Fin -->
+                    <path d="M350,250 Q380,300 340,310 Q360,270 350,250" fill="url(#finGrad)" />
+                    <!-- Eye -->
+                    <circle cx="470" cy="190" r="12" fill="#fff" />
+                    <circle cx="473" cy="188" r="7" fill="#1a237e" />
+                    <circle cx="476" cy="186" r="3" fill="#fff" />
+                    <!-- Divine Crown on Fish -->
+                    <polygon points="450,170 455,150 465,168 470,145 480,170" fill="#ffd54f" />
+                    <!-- Scales pattern -->
+                    <g opacity="0.3">
+                        <circle cx="280" cy="190" r="15" fill="none" stroke="#fff" stroke-width="1" />
+                        <circle cx="310" cy="185" r="15" fill="none" stroke="#fff" stroke-width="1" />
+                        <circle cx="340" cy="190" r="15" fill="none" stroke="#fff" stroke-width="1" />
+                        <circle cx="370" cy="195" r="15" fill="none" stroke="#fff" stroke-width="1" />
+                        <circle cx="295" cy="210" r="15" fill="none" stroke="#fff" stroke-width="1" />
+                        <circle cx="325" cy="205" r="15" fill="none" stroke="#fff" stroke-width="1" />
+                        <circle cx="355" cy="210" r="15" fill="none" stroke="#fff" stroke-width="1" />
+                    </g>
+                    <!-- Glowing Vedas being carried -->
+                    <g class="vedas-carried" transform="translate(470,210)">
+                        <rect x="0" y="0" width="20" height="8" rx="2" fill="#ffd54f" class="veda-glow" />
+                        <rect x="5" y="12" width="18" height="7" rx="2" fill="#ffe082" class="veda-glow" />
+                        <rect x="-2" y="22" width="22" height="8" rx="2" fill="#ffb300" class="veda-glow" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <div class="story-content">
+            <span class="chapter-number ocean-text">Chapter III</span>
+            <h1 class="section-title ocean-title">Matsya Avatar — The Cosmic Rescue</h1>
+            <div class="story-text-block glass-panel-ocean">
+                <p class="lead-text"><strong>Lord Vishnu</strong> transforms into <span
+                        class="highlight-gold">Matsya</span> — the magnificent golden fish — His first avatar among the
+                    Dashavatara.</p>
+                <p>He dives deep into the infinite cosmic ocean, pursuing the demon Hayagrīva through the primordial
+                    waters. A fierce battle ensues in the depths of creation.</p>
+            </div>
+            <div class="victory-banner" id="victory-banner">
+                <p>⚔️ After a cosmic battle, Matsya <strong>defeats Hayagrīva</strong> and retrieves the sacred Vedas,
+                    returning them to Brahma.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION 4: CREATION BEGINS — UGADI                           -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="creation-begins" class="story-section section-creation">
+        <canvas id="creation-particles" class="bg-canvas"></canvas>
+        <div class="creation-burst" id="creation-burst"></div>
+
+        <div class="story-content creation-content">
+            <span class="chapter-number creation-text">Chapter IV</span>
+            <h1 class="section-title creation-title" id="ugadi-reveal">
+                <span class="title-line">Brahma Begins</span>
+                <span class="title-line title-large">The Creation</span>
+            </h1>
+            <div class="story-text-block glass-panel-gold">
+                <p class="lead-text">With the sacred <span class="highlight-gold">Vedas</span> restored, Lord Brahma
+                    begins the magnificent act of creation — shaping the cosmos, the stars, the earth, all living
+                    beings.</p>
+                <p>The divine knowledge flows from the Vedas like rivers of light, forming the fabric of reality itself.
+                </p>
+            </div>
+            <div class="ugadi-declaration">
+                <div class="declaration-border">
+                    <h2>This Sacred Day Is</h2>
+                    <h1 class="ugadi-name">
+                        <span class="letter" style="--i:0">U</span>
+                        <span class="letter" style="--i:1">G</span>
+                        <span class="letter" style="--i:2">A</span>
+                        <span class="letter" style="--i:3">D</span>
+                        <span class="letter" style="--i:4">I</span>
+                    </h1>
+                    <p class="ugadi-alt">युगादि · Yugādi</p>
+                    <p class="ugadi-subtitle">The First Day of Creation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION X: THE COSMIC WHEEL (Cyclic Time)                    -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="cosmic-wheel-section" class="story-section section-wheel">
+        <div class="wheel-container">
+            <!-- Glowing Rotating Wheel (Kaala Chakra) -->
+            <svg class="kaala-chakra" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="wheelGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#fff9c4" stop-opacity="0.8"/>
+                        <stop offset="50%" stop-color="#ffb300" stop-opacity="0.4"/>
+                        <stop offset="100%" stop-color="#f57f17" stop-opacity="0"/>
+                    </radialGradient>
+                    <filter id="chakraBlur">
+                        <feGaussianBlur stdDeviation="4" result="blur"/>
+                        <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <circle cx="200" cy="200" r="180" fill="url(#wheelGlow)"/>
+                <g filter="url(#chakraBlur)" stroke="#ffd54f" stroke-width="2" fill="none">
+                    <circle cx="200" cy="200" r="160" stroke-width="4" stroke-dasharray="10, 15"/>
+                    <circle cx="200" cy="200" r="140" stroke-width="2" strokeOpacity="0.5"/>
+                    <circle cx="200" cy="200" r="60" stroke-width="4"/>
+                    <!-- 12 Spokes for the 12 months/zodiacs -->
+                    <g class="wheel-spokes">
+                        <line x1="200" y1="140" x2="200" y2="40"/>
+                        <line x1="200" y1="260" x2="200" y2="360"/>
+                        <line x1="140" y1="200" x2="40" y2="200"/>
+                        <line x1="260" y1="200" x2="360" y2="200"/>
+                        
+                        <line x1="170" y1="148" x2="115" y2="55"/>
+                        <line x1="230" y1="252" x2="285" y2="345"/>
+                        
+                        <line x1="230" y1="148" x2="285" y2="55"/>
+                        <line x1="170" y1="252" x2="115" y2="345"/>
+
+                        <line x1="148" y1="170" x2="55" y2="115"/>
+                        <line x1="252" y1="230" x2="345" y2="285"/>
+
+                        <line x1="252" y1="170" x2="345" y2="115"/>
+                        <line x1="148" y1="230" x2="55" y2="285"/>
+                    </g>
+                    <!-- Center Hub -->
+                    <circle cx="200" cy="200" r="20" fill="#ffb300"/>
+                    <circle cx="200" cy="200" r="10" fill="#ffffff"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="story-content text-overlay">
+            <h1 class="section-title wheel-title">The Cosmic Clock</h1>
+            <div class="story-text-block glass-panel">
+                <p class="lead-text">Just as Monday returns after Sunday, the universe does not move in a straight line. It moves in a <span class="highlight-gold">Great Circle</span>.</p>
+                <p>Time (Kaala) has no absolute beginning or end, only endless cycles of blooming and folding. <strong>Ugadi is not just a New Year</strong>—it is the very moment this cosmic wheel completes a turn and starts its breathtaking journey all over again.</p>
+            </div>
+            <div class="subtitle-banner">
+                <p class="subtitle-text">⏳ A day for Brahma. A lifetime for the Universe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION 5: THE YUGAS — COSMIC AGES                           -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="yugas-transition" class="story-section section-yugas">
+        <div class="yugas-timeline">
+            <!-- Rama Coronation Panel -->
+            <div class="yuga-panel rama-panel" id="rama-panel">
+                <div class="yuga-bg rama-bg"></div>
+                <div class="cosmic-alignment">
+                    <div class="celestial-body sun-body">☀️</div>
+                    <div class="celestial-body moon-body">🌙</div>
+                    <div class="orbit-ring"></div>
+                </div>
+                <div class="yuga-content">
+                    <span class="yuga-era">Treta Yuga</span>
+                    <h2 class="yuga-title">Rama's Coronation</h2>
+                    <p>On the auspicious day of Ugadi, with the <strong>Sun and Moon</strong> in perfect cosmic
+                        alignment of the lunisolar cycle, <span class="highlight-gold">Lord Rama</span> was crowned king
+                        of Ayodhya.</p>
+                    <p class="yuga-detail">The heavens rejoiced. Dharma was reestablished. A golden age of righteousness
+                        dawned.</p>
+                </div>
+                <!-- Decorative Crown SVG -->
+                <svg class="crown-svg" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,70 20,30 35,50 50,10 65,50 80,15 95,50 110,30 120,70" fill="none"
+                        stroke="#ffd54f" stroke-width="2" />
+                    <circle cx="50" cy="15" r="5" fill="#e91e63" />
+                    <circle cx="80" cy="20" r="4" fill="#2196f3" />
+                    <circle cx="20" cy="35" r="4" fill="#4caf50" />
+                    <line x1="10" y1="70" x2="120" y2="70" stroke="#ffd54f" stroke-width="3" />
+                </svg>
+            </div>
+
+            <!-- Transition Divider -->
+            <div class="yuga-divider">
+                <div class="divider-line"></div>
+                <span class="divider-text">Ages Pass…</span>
+                <div class="divider-line"></div>
+            </div>
+
+            <!-- Krishna's Departure Panel -->
+            <div class="yuga-panel krishna-panel" id="krishna-panel">
+                <div class="yuga-bg krishna-bg"></div>
+                <div class="yuga-content">
+                    <span class="yuga-era era-twilight">Dvapara Yuga → Kali Yuga</span>
+                    <h2 class="yuga-title krishna-title">Krishna's Departure</h2>
+                    <p>In a quiet forest, the hunter <strong>Jara</strong>, mistaking Krishna's feet for a deer's,
+                        releases his fateful arrow…</p>
+                </div>
+                <!-- Krishna's Story Video -->
+                <div class="krishna-video-scene" id="krishna-video-scene">
+                    <video class="krishna-video" id="krishna-video" muted playsinline preload="auto" loop
+                        poster="WhatsApp_Video_2026-03-09_at_5_39_33_PM_frames/WhatsApp_Video_2026-03-09_at_5_39_33_PM_frames/WhatsApp_Video_2026-03-09_at_5_39_33_PM_001.png">
+                        <source src="krishna-departure - Trim.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay"></div>
+                    <p class="hunter-pov-text">The final moments of Dvapara Yuga unfold…</p>
+                </div>
+                <div class="kali-yuga-banner" id="kali-banner">
+                    <p>This fateful arrow marks the <strong>end of Dvapara Yuga</strong> and the dawn of <span
+                            class="kali-text">Kali Yuga</span> — the current age of humanity.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-content yugas-header">
+            <span class="chapter-number">Chapter V</span>
+            <h1 class="section-title">The Cosmic Ages</h1>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION 6: MEANING OF UGADI                                   -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="ugadi-meaning" class="story-section section-meaning">
+        <div class="meaning-bg-pattern"></div>
+        <div class="story-content meaning-content">
+            <span class="chapter-number meaning-label">Chapter VI</span>
+            <h1 class="section-title meaning-title">The Meaning of Ugadi</h1>
+            <div class="etymology-display">
+                <div class="word-split">
+                    <div class="word-part" id="word-yuga">
+                        <span class="sanskrit">युग</span>
+                        <span class="transliteration">Yuga</span>
+                        <span class="meaning">Age / Era</span>
+                    </div>
+                    <div class="word-plus">+</div>
+                    <div class="word-part" id="word-adi">
+                        <span class="sanskrit">आदि</span>
+                        <span class="transliteration">Ādi</span>
+                        <span class="meaning">Beginning</span>
+                    </div>
+                    <div class="word-equals">=</div>
+                    <div class="word-result" id="word-ugadi">
+                        <span class="sanskrit result-sanskrit">युगादि</span>
+                        <span class="transliteration result-trans">Yugādi</span>
+                        <span class="meaning result-meaning">The Beginning of a New Age</span>
+                    </div>
+                </div>
+            </div>
+            <div class="meaning-description glass-panel-meaning">
+                <p>Ugadi celebrates the <strong>commencement of a new cosmic cycle</strong> — a moment when time itself
+                    is renewed. It is the first day of the Hindu lunisolar calendar, marking the start of the new year
+                    in the Deccan region of India.</p>
+                <p>Just as Brahma began creation anew, so too does every being get a chance to begin again — with hope,
+                    with resolve, with the sweetness and bitterness that life offers.</p>
+            </div>
+            <div class="transition-art">
+                <div class="mandala-ring ring-1"></div>
+                <div class="mandala-ring ring-2"></div>
+                <div class="mandala-ring ring-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION 7: NATURE'S RENEWAL                                   -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="natures-renewal" class="story-section section-nature">
+        <canvas id="rain-canvas" class="bg-canvas"></canvas>
+        <div class="nature-scene">
+            <!-- Mango Tree SVG -->
+            <svg class="mango-tree-svg" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="trunkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#5d4037" />
+                        <stop offset="100%" style="stop-color:#3e2723" />
+                    </linearGradient>
+                    <radialGradient id="leafGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" style="stop-color:#66bb6a" />
+                        <stop offset="100%" style="stop-color:#2e7d32" />
+                    </radialGradient>
+                    <radialGradient id="newLeafGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" style="stop-color:#aed581" />
+                        <stop offset="100%" style="stop-color:#7cb342" />
+                    </radialGradient>
+                    <radialGradient id="flowerGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" style="stop-color:#fff9c4" />
+                        <stop offset="100%" style="stop-color:#fdd835" />
+                    </radialGradient>
+                </defs>
+                <!-- Trunk -->
+                <path d="M230,600 L220,450 Q210,400 230,350 Q240,300 250,280" stroke="url(#trunkGrad)" stroke-width="30"
+                    fill="none" stroke-linecap="round" />
+                <path d="M250,280 Q280,200 320,180" stroke="url(#trunkGrad)" stroke-width="15" fill="none"
+                    stroke-linecap="round" />
+                <path d="M250,320 Q200,250 180,200" stroke="url(#trunkGrad)" stroke-width="12" fill="none"
+                    stroke-linecap="round" />
+                <path d="M240,380 Q300,340 340,300" stroke="url(#trunkGrad)" stroke-width="10" fill="none"
+                    stroke-linecap="round" />
+                <!-- Leaf clusters -->
+                <g class="leaves-group">
+                    <ellipse cx="180" cy="180" rx="60" ry="45" fill="url(#leafGrad)" opacity="0.9" />
+                    <ellipse cx="320" cy="160" rx="55" ry="50" fill="url(#leafGrad)" opacity="0.85" />
+                    <ellipse cx="250" cy="130" rx="65" ry="45" fill="url(#leafGrad)" opacity="0.9" />
+                    <ellipse cx="350" cy="280" rx="50" ry="40" fill="url(#leafGrad)" opacity="0.8" />
+                    <ellipse cx="150" cy="250" rx="45" ry="35" fill="url(#leafGrad)" opacity="0.85" />
+                    <ellipse cx="280" cy="220" rx="55" ry="40" fill="url(#leafGrad)" opacity="0.9" />
+                </g>
+                <!-- New fresh leaves (lighter green) -->
+                <g class="new-leaves">
+                    <ellipse cx="200" cy="150" rx="25" ry="15" fill="url(#newLeafGrad)" class="new-leaf"
+                        style="--delay:0" />
+                    <ellipse cx="300" cy="140" rx="20" ry="12" fill="url(#newLeafGrad)" class="new-leaf"
+                        style="--delay:1" />
+                    <ellipse cx="350" cy="250" rx="22" ry="14" fill="url(#newLeafGrad)" class="new-leaf"
+                        style="--delay:2" />
+                    <ellipse cx="160" cy="220" rx="18" ry="11" fill="url(#newLeafGrad)" class="new-leaf"
+                        style="--delay:3" />
+                    <ellipse cx="270" cy="100" rx="20" ry="13" fill="url(#newLeafGrad)" class="new-leaf"
+                        style="--delay:4" />
+                </g>
+                <!-- Mango Flowers -->
+                <g class="mango-flowers">
+                    <g class="flower" transform="translate(170,165)" style="--delay:0">
+                        <circle cx="0" cy="0" r="4" fill="#fff9c4" />
+                        <circle cx="7" cy="-3" r="3" fill="#fff59d" />
+                        <circle cx="-5" cy="-6" r="3" fill="#fff9c4" />
+                        <circle cx="3" cy="-9" r="2.5" fill="#fff59d" />
+                        <circle cx="-3" cy="5" r="3" fill="#fff9c4" />
+                    </g>
+                    <g class="flower" transform="translate(310,150)" style="--delay:1">
+                        <circle cx="0" cy="0" r="4" fill="#fff9c4" />
+                        <circle cx="6" cy="-4" r="3" fill="#fff59d" />
+                        <circle cx="-4" cy="-7" r="3" fill="#fff9c4" />
+                        <circle cx="2" cy="6" r="2.5" fill="#fff59d" />
+                    </g>
+                    <g class="flower" transform="translate(260,110)" style="--delay:2">
+                        <circle cx="0" cy="0" r="4" fill="#fff9c4" />
+                        <circle cx="5" cy="-5" r="3" fill="#fff59d" />
+                        <circle cx="-6" cy="-3" r="3" fill="#fff9c4" />
+                        <circle cx="4" cy="4" r="2.5" fill="#fff59d" />
+                        <circle cx="-2" cy="7" r="3" fill="#fff9c4" />
+                    </g>
+                    <g class="flower" transform="translate(340,270)" style="--delay:3">
+                        <circle cx="0" cy="0" r="3.5" fill="#fff9c4" />
+                        <circle cx="5" cy="-4" r="2.5" fill="#fff59d" />
+                        <circle cx="-5" cy="-2" r="2.5" fill="#fff9c4" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <div class="story-content nature-story">
+            <span class="chapter-number nature-label">Chapter VII</span>
+            <h1 class="section-title nature-title">Nature's Renewal</h1>
+            <div class="story-text-block glass-panel-nature">
+                <p class="lead-text">After the rains recede, the earth awakens. <span class="highlight-green">New
+                        leaves</span> unfurl on ancient trees, shimmering in tender green — a sign that life begins
+                    again.</p>
+                <p>The <strong>mango trees</strong> burst into bloom — their pale golden flowers promising the sweetness
+                    of fruit to come. Nature herself celebrates Ugadi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION 8: UGADI PACHADI — THE SIX TASTES                    -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="ugadi-pachadi" class="story-section section-pachadi">
+        <div class="story-content pachadi-content">
+            <span class="chapter-number pachadi-label">Chapter VIII</span>
+            <h1 class="section-title pachadi-title">Ugadi Pachadi</h1>
+            <p class="pachadi-intro">A sacred dish of <strong>six tastes</strong> — each representing an emotion of
+                life. To eat Ugadi Pachadi is to accept the fullness of the year ahead, with all its joys and sorrows,
+                heartfully.</p>
+
+            <div class="pachadi-layout">
+                <!-- Central Bowl -->
+                <div class="pachadi-bowl">
+                    <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" class="bowl-svg">
+                        <defs>
+                            <linearGradient id="bowlGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8d6e63" />
+                                <stop offset="100%" style="stop-color:#4e342e" />
+                            </linearGradient>
+                        </defs>
+                        <ellipse cx="100" cy="40" rx="90" ry="20" fill="#6d4c41" opacity="0.5" />
+                        <path d="M10,40 Q10,140 100,150 Q190,140 190,40" fill="url(#bowlGrad)" />
+                        <ellipse cx="100" cy="40" rx="90" ry="20" fill="#8d6e63" />
+                        <!-- Inner contents -->
+                        <ellipse cx="100" cy="45" rx="75" ry="15" fill="#a1887f" opacity="0.6" />
+                    </svg>
+                    <span class="bowl-label">Life's Full Spectrum</span>
+                </div>
+
+                <!-- Ingredients Grid -->
+                <div class="ingredients-grid">
+                    <div class="ingredient-card" data-taste="sweet">
+                        <div class="ingredient-icon">🍯</div>
+                        <h3>Jaggery</h3>
+                        <span class="taste-label">Sweet</span>
+                        <p class="emotion">Happiness & Joy</p>
+                        <p class="detail">May the year bring moments of pure sweetness and celebration.</p>
+                    </div>
+                    <div class="ingredient-card" data-taste="sour">
+                        <div class="ingredient-icon">🍋</div>
+                        <h3>Raw Mango</h3>
+                        <span class="taste-label">Sour</span>
+                        <p class="emotion">Surprise & Challenge</p>
+                        <p class="detail">Life's unexpected turns sharpen our senses and make us resilient.</p>
+                    </div>
+                    <div class="ingredient-card" data-taste="bitter">
+                        <div class="ingredient-icon">🌿</div>
+                        <h3>Neem Flowers</h3>
+                        <span class="taste-label">Bitter</span>
+                        <p class="emotion">Sadness & Hardship</p>
+                        <p class="detail">Bitterness teaches us gratitude and builds our inner strength.</p>
+                    </div>
+                    <div class="ingredient-card" data-taste="spicy">
+                        <div class="ingredient-icon">🌶️</div>
+                        <h3>Chilli Powder</h3>
+                        <span class="taste-label">Spicy</span>
+                        <p class="emotion">Anger & Passion</p>
+                        <p class="detail">The fire within drives us to fight for what matters most.</p>
+                    </div>
+                    <div class="ingredient-card" data-taste="salty">
+                        <div class="ingredient-icon">🧂</div>
+                        <h3>Salt</h3>
+                        <span class="taste-label">Salty</span>
+                        <p class="emotion">Fear & Anxiety</p>
+                        <p class="detail">A pinch of fear keeps us grounded and reminds us to be humble.</p>
+                    </div>
+                    <div class="ingredient-card" data-taste="tangy">
+                        <div class="ingredient-icon">🥭</div>
+                        <h3>Tamarind</h3>
+                        <span class="taste-label">Tangy</span>
+                        <p class="emotion">Disgust & Discomfort</p>
+                        <p class="detail">Discomfort pushes us beyond our limits to discover new selves.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pachadi-wisdom glass-panel-warm">
+                <p>✨ He or she who eats <strong>Ugadi Pachadi</strong> embraces every emotion the year may bring —
+                    accepting them wholeheartedly, with grace and courage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION 9: EVENTS GATEWAY                                     -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="events-gateway" class="story-section section-events">
+        <div class="confetti-container" id="confetti-container"></div>
+        <div class="story-content events-content">
+            <span class="chapter-number events-label">Chapter IX</span>
+            <h1 class="section-title events-title">Celebrate Ugadi</h1>
+            <p class="events-intro">Join the celebration! Explore events near you and be part of the cosmic renewal.</p>
+
+            <div class="events-grid">
+                <a href="events.html#morning" class="event-card" data-event="morning">
+                    <div class="event-icon">🌅</div>
+                    <h3>Morning Events</h3>
+                    <p>Rangoli, Pooja, and Prasadam Distribution ceremonies.</p>
+                    <span class="event-link">Explore Events →</span>
+                </a>
+                <a href="events.html#arts-games" class="event-card" data-event="arts-games">
+                    <div class="event-icon">🎯</div>
+                    <h3>Arts & Games</h3>
+                    <p>Mehendi, Musical Chairs, notice board, and exciting fun challenges.</p>
+                    <span class="event-link">Explore Events →</span>
+                </a>
+                <a href="events.html#cultural" class="event-card" data-event="cultural">
+                    <div class="event-icon">🎭</div>
+                    <h3>Cultural & Stage</h3>
+                    <p>Kuchipudi, Amrita Raaga, Aurora Club Dance, and folk performances.</p>
+                    <span class="event-link">Explore Events →</span>
+                </a>
+                <a href="events.html#night" class="event-card" data-event="night">
+                    <div class="event-icon">🌙</div>
+                    <h3>Night Events & DJ</h3>
+                    <p>Bonfire, E-Sports, and DJ night to conclude the celebration.</p>
+                    <span class="event-link">Explore Events →</span>
+                </a>
+            </div>
+
+            <a href="events.html" class="cta-button" id="main-cta">
+                <span>View All Events</span>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+
+        <footer class="site-footer">
+            <p>Made with ❤️ for the celebration of new beginnings</p>
+            <p class="footer-small">© 2026 Ugadi Festival</p>
+        </footer>
+    </section>
+
+    <!-- ═══════════════════ FULLSCREEN VIDEO OVERLAY ═══════════════════ -->
+    <div class="video-fullscreen-overlay" id="video-fullscreen-overlay">
+        <video id="fullscreen-video" muted playsinline preload="auto">
+            <source src="krishna-departure - Trim.mp4" type="video/mp4">
+        </video>
+        <p class="fullscreen-caption">Krishna's Departure — The End of an Era</p>
+    </div>
+
+    <!-- ═══════════════════ SCRIPTS ═══════════════════ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

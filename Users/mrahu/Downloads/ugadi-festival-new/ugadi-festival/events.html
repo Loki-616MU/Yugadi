@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugadi Events — Celebrate the New Year</title>
+    <meta name="description"
+        content="Discover Ugadi celebrations, temple ceremonies, cultural programs, and community events near you.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Dark Cosmic Theme */
+            --cosmic-deep: #050a1a;
+            --cosmic-blue: #0a0e27;
+            --cosmic-purple: #1a1040;
+            --gold: #FF9800;
+            --gold-bright: #FFD700;
+            --gold-pale: #FFF8E1;
+            --saffron: #FF9800;
+            --lotus-pink: #E91E63;
+            --white: #ffffff;
+            --white-90: rgba(255, 255, 255, 0.9);
+            --white-70: rgba(255, 255, 255, 0.7);
+            --white-50: rgba(255, 255, 255, 0.5);
+            --white-20: rgba(255, 255, 255, 0.2);
+            --white-10: rgba(255, 255, 255, 0.1);
+            --white-05: rgba(255, 255, 255, 0.05);
+
+            /* Borders and overlays */
+            --border-color: var(--white-10);
+            --overlay-bg: rgba(10, 14, 39, 0.85);
+
+            --font-display: 'Cinzel Decorative', serif;
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Inter', sans-serif;
+            --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: var(--gold) var(--cosmic-deep);
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--white-90);
+            background: linear-gradient(135deg, #050a1a, #0a0e27, #1a1040, #050a1a);
+            background-size: 400% 400%;
+            animation: gradientShift 12s ease infinite;
+            line-height: 1.7;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 50% 100%; }
+            50% { background-position: 100% 50%; }
+            75% { background-position: 50% 0%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--cosmic-deep);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ── Header ── */
+        .events-header {
+            text-align: center;
+            padding: 5rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--cosmic-purple), transparent);
+        }
+
+        .events-header canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .events-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(244, 160, 32, 0.15) 0%, transparent 60%);
+        }
+
+        .events-page-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            background: linear-gradient(135deg, var(--gold-pale), var(--gold-bright), var(--saffron));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .events-subtitle {
+            font-size: 1.05rem;
+            color: var(--white-50);
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* ── Category Tabs ── */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.5rem 2rem;
+            flex-wrap: wrap;
+            background: var(--overlay-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .tab-btn {
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border: 1px solid var(--white-10);
+            border-radius: 50px;
+            background: transparent;
+            color: var(--white-50);
+            cursor: pointer;
+            transition: all 0.3s var(--ease-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab-btn:hover,
+        .tab-btn.active {
+            background: rgba(244, 160, 32, 0.15);
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: scale(1.05);
+        }
+
+        .tab-btn .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(244, 160, 32, 0.35);
+            transform: scale(0);
+            animation: rippleAnim 0.6s ease-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes rippleAnim {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* ── Events Container ── */
+        .events-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .event-category {
+            margin-bottom: 3rem;
+        }
+
+        /* Scroll reveal */
+        .scroll-hidden {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .scroll-hidden.from-right {
+            transform: translateX(60px);
+        }
+        .scroll-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--white-10);
+        }
+
+        .category-icon {
+            font-size: 1.8rem;
+            display: inline-block;
+            transition: transform 0.5s ease;
+        }
+
+        .category-header:hover .category-icon {
+            transform: rotate(360deg);
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--gold-bright);
+        }
+
+        /* ── Individual Event Cards ── */
+        .event-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .event-item {
+            position: relative;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--white-10);
+            transition: all 0.4s var(--ease-smooth);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transform-style: preserve-3d;
+            perspective: 800px;
+            cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text y='24' font-size='24'>🎉</text></svg>") 4 4, pointer;
+        }
+
+        .event-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--gold);
+            box-shadow: 0 12px 35px rgba(244, 160, 32, 0.25);
+        }
+
+        .event-item:active {
+            animation: tapBounce 0.4s ease;
+        }
+
+        @keyframes tapBounce {
+            0%   { transform: scale(1); }
+            30%  { transform: scale(0.95); }
+            60%  { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .event-date {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            background: rgba(244, 160, 32, 0.15);
+            color: var(--gold);
+            padding: 3px 12px;
+            border-radius: 20px;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 4px rgba(244, 160, 32, 0.3); }
+            50% { box-shadow: 0 0 14px rgba(244, 160, 32, 0.6), 0 0 20px rgba(244, 160, 32, 0.2); }
+        }
+
+        .event-name {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .event-venue {
+            font-size: 0.85rem;
+            color: var(--white-50);
+            margin-bottom: 0.3rem;
+        }
+
+        .event-venue::before {
+            content: '📍 ';
+        }
+
+        .event-time {
+            font-size: 0.8rem;
+            color: var(--white-50);
+        }
+
+        .event-time::before {
+            content: '🕐 ';
+        }
+
+        .event-desc {
+            font-size: 0.8rem;
+            color: var(--white-50);
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        /* ── Countdown Timer ── */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .countdown-unit {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--white-10);
+            border-radius: 12px;
+            padding: 0.8rem 1.2rem;
+            min-width: 70px;
+            backdrop-filter: blur(5px);
+        }
+
+        .countdown-number {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--gold-bright);
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.6rem;
+            color: var(--white-50);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .countdown {
+                gap: 0.75rem;
+            }
+            .countdown-unit {
+                padding: 0.5rem 0.7rem;
+                min-width: 55px;
+            }
+            .countdown-number {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* ── Footer ── */
+        .events-footer {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border-top: none;
+            background: linear-gradient(90deg, #1a1040, #FF9800, #050a1a, #FFD700, #1a1040);
+            background-size: 300% 100%;
+            animation: footerGradient 6s ease infinite;
+            color: var(--white);
+        }
+
+        @keyframes footerGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .events-footer p {
+            font-size: 0.9rem;
+            color: var(--white);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .events-footer .footer-tagline {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-image-wrapper {
+            margin-bottom: 2rem;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--white-10);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            aspect-ratio: 21 / 9;
+            max-height: 400px;
+        }
+
+        .category-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.7s var(--ease-smooth);
+        }
+
+        .category-image-wrapper:hover .category-image {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .event-list {
+                grid-template-columns: 1fr;
+            }
+
+            .category-tabs {
+                gap: 0.5rem;
+            }
+
+            .tab-btn {
+                font-size: 0.65rem;
+                padding: 6px 14px;
+            }
+
+            .category-image-wrapper {
+                aspect-ratio: 16 / 9;
+            }
+        }
+        /* ── Back Link ── */
+        .back-link {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--white-70);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.6rem 1.2rem;
+            border: 1px solid var(--white-10);
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s var(--ease-smooth);
+            z-index: 100;
+        }
+
+        .back-link:hover {
+            background: rgba(244, 160, 32, 0.15);
+            border-color: var(--gold);
+            color: var(--gold-bright);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .back-link {
+                top: 1rem;
+                left: 1rem;
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── Header ── -->
+    <header class="events-header">
+        <a href="index.html" class="back-link">
+            <span>← Back to Story</span>
+        </a>
+        <canvas id="confettiCanvas"></canvas>
+        <h1 class="events-page-title">Yugarambham'26</h1>
+        <p class="events-subtitle">One Day. Endless Celebrations. 🎉</p>
+        <div class="countdown" id="countdown">
+            <div class="countdown-unit">
+                <div class="countdown-number" id="cd-days">--</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-unit">
+                <div class="countdown-number" id="cd-hours">--</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-unit">
+                <div class="countdown-number" id="cd-mins">--</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-unit">
+                <div class="countdown-number" id="cd-secs">--</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── Category Tabs ── -->
+    <nav class="category-tabs">
+        <button class="tab-btn active" data-category="all">All Events</button>
+        <button class="tab-btn" data-category="morning">🌅 Morning</button>
+        <button class="tab-btn" data-category="arts-games">🎯 Arts & Games</button>
+        <button class="tab-btn" data-category="cultural">🎭 Cultural</button>
+        <button class="tab-btn" data-category="stalls">🎪 Stalls & Food</button>
+        <button class="tab-btn" data-category="night">🌙 Night Events</button>
+    </nav>
+
+    <!-- ── Events Content ── -->
+    <main class="events-container">
+
+        <!-- Morning Events -->
+        <section class="event-category" id="morning" data-type="morning">
+            <div class="category-header">
+                <span class="category-icon">🌅</span>
+                <h2 class="category-title">Morning Events</h2>
+            </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_morning.png" alt="Morning Events" class="category-image">
+            </div>
+            <div class="event-list">
+                <div class="event-item">
+                    <h3 class="event-name">Rangoli</h3>
+                    <p class="event-venue">Flag Pole</p>
+                    <p class="event-time">7:00 AM — 7:30 AM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Pooja (Dhikrithi Club)</h3>
+                    <p class="event-venue">Amrita Darshanam</p>
+                    <p class="event-time">7:30 AM — 8:00 AM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Prasadam Distribution</h3>
+                    <p class="event-venue">Student Volunteers</p>
+                    <p class="event-time">8:00 AM — 8:30 AM</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arts & Games -->
+        <section class="event-category" id="arts-games" data-type="arts-games">
+            <div class="category-header">
+                <span class="category-icon">🎯</span>
+                <h2 class="category-title">Arts & Games</h2>
+            </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_games.png" alt="Arts & Games" class="category-image">
+            </div>
+            <div class="event-list">
+                <div class="event-item">
+                    <h3 class="event-name">Mehendi</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Musical Chairs & Tug of War</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Relay</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                    <p class="event-desc">Balance the Book, Mini Basketball, Puzzle Solving</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Future Me Notice Board</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Place the bottle</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Balloon burst</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Blindfold monkey tail drawing challenge</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Mini basketball</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Ball in bucket</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Ball in a cup with dip</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Rings throwing to stick</h3>
+                    <p class="event-venue">Near Flag Pole</p>
+                    <p class="event-time">4:30 PM — 6:00 PM</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural & Stage -->
+        <section class="event-category" id="cultural" data-type="cultural">
+            <div class="category-header">
+                <span class="category-icon">🎭</span>
+                <h2 class="category-title">Cultural & Stage</h2>
+            </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_cultural.png" alt="Cultural & Stage" class="category-image">
+            </div>
+            <div class="event-list">
+                <div class="event-item">
+                    <h3 class="event-name">Kuchipudi and Story Telling</h3>
+                    <p class="event-venue">Stage</p>
+                    <p class="event-time">5:00 PM — 5:30 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Amrita Raaga Club Performance</h3>
+                    <p class="event-venue">Stage</p>
+                    <p class="event-time">5:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Aurora Club Dance Performance</h3>
+                    <p class="event-venue">Stage</p>
+                    <p class="event-time">6:00 PM — 6:30 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Culturals</h3>
+                    <p class="event-venue">Stage</p>
+                    <p class="event-time">6:30 PM — 7:30 PM</p>
+                    <p class="event-desc">Folk Dances, Singing Performances</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stalls & Food -->
+        <section class="event-category" id="stalls" data-type="stalls">
+            <div class="category-header">
+                <span class="category-icon">🎪</span>
+                <h2 class="category-title">Stalls & Food</h2>
+            </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_stalls.png" alt="Stalls & Food" class="category-image">
+            </div>
+            <div class="event-list">
+                <div class="event-item">
+                    <h3 class="event-name">Stalls</h3>
+                    <p class="event-venue">Parking Area</p>
+                    <p class="event-time">4:30 PM — 7:30 PM</p>
+                    <p class="event-desc">Clay Moulding Competition, Fireless Cooking Competition, AR/VR (Amigoos Club),
+                        Place The Bottle Challenge, Balloon Burst, Blindfold Drawing Challenge</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">Canteen Food Stalls</h3>
+                    <p class="event-venue">Parking Area</p>
+                    <p class="event-time">4:30 PM — 8:30 PM</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Night Events -->
+        <section class="event-category" id="night" data-type="night">
+            <div class="category-header">
+                <span class="category-icon">🌙</span>
+                <h2 class="category-title">Night Events</h2>
+            </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_night.png" alt="Night Events" class="category-image">
+            </div>
+            <div class="event-list">
+                <div class="event-item">
+                    <h3 class="event-name">Bonfire</h3>
+                    <p class="event-venue">Before Temple</p>
+                    <p class="event-time">5:30 PM — 6:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">E Sports</h3>
+                    <p class="event-venue">Hostels</p>
+                    <p class="event-time">4:30 PM — 6:30 PM &amp; 8:00 PM — 10:00 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3 class="event-name">DJ</h3>
+                    <p class="event-venue">Infront of the Stage</p>
+                    <p class="event-time">8:00 PM — 9:00 PM</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="events-footer">
+        <p class="footer-tagline">🌈 Come Celebrate. Play. Dance. Feast. 🌈</p>
+        <p>Made with ❤️ for the celebration of new beginnings</p>
+        <p style="font-size: 0.7rem; margin-top: 0.5rem; opacity: 0.8;">© 2026 Ugadi Festival · Yugarambham</p>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════
+        // 1. TAB FILTERING WITH RIPPLE EFFECT
+        // ═══════════════════════════════════════
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Ripple effect
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                const rect = btn.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                btn.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+
+                // Tab toggle
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const cat = btn.dataset.category;
+                document.querySelectorAll('.event-category').forEach(section => {
+                    if (cat === 'all' || section.dataset.type === cat) {
+                        section.style.display = 'block';
+                        section.style.animation = 'fadeInUp 0.4s ease-out';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // ═══════════════════════════════════════
+        // 2. CONFETTI PARTICLES IN HEADER
+        // ═══════════════════════════════════════
+        const canvas = document.getElementById('confettiCanvas');
+        const ctx = canvas.getContext('2d');
+        const confettiColors = ['#FF5722', '#4CAF50', '#FFB300', '#FF9800', '#8BC34A', '#E91E63'];
+        let confettiParticles = [];
+
+        function resizeCanvas() {
+            const header = canvas.parentElement;
+            canvas.width = header.offsetWidth;
+            canvas.height = header.offsetHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class Confetti {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height - canvas.height;
+                this.size = Math.random() * 6 + 3;
+                this.speedY = Math.random() * 1.5 + 0.5;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.color = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+                this.rotation = Math.random() * 360;
+                this.rotSpeed = Math.random() * 4 - 2;
+                this.opacity = Math.random() * 0.5 + 0.3;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                this.rotation += this.rotSpeed;
+                if (this.y > canvas.height + 20) this.reset();
+            }
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.rotation * Math.PI) / 180);
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = this.color;
+                ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size * 0.6);
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < 60; i++) {
+            const p = new Confetti();
+            p.y = Math.random() * canvas.height;
+            confettiParticles.push(p);
+        }
+
+        function animateConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            confettiParticles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animateConfetti);
+        }
+        animateConfetti();
+
+        // ═══════════════════════════════════════
+        // 3. 3D TILT EFFECT ON EVENT CARDS
+        // ═══════════════════════════════════════
+        document.querySelectorAll('.event-item').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -8;
+                const rotateY = ((x - centerX) / centerX) * 8;
+                card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
+            });
+        });
+
+        // ═══════════════════════════════════════
+        // 4. SCROLL-TRIGGERED STAGGERED REVEAL
+        // ═══════════════════════════════════════
+        const allItems = document.querySelectorAll('.event-item, .category-image-wrapper');
+        allItems.forEach((item, i) => {
+            item.classList.add('scroll-hidden');
+            if (i % 2 === 1) item.classList.add('from-right');
+        });
+
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('scroll-visible');
+                    }, i * 80);
+                    scrollObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+        allItems.forEach(item => scrollObserver.observe(item));
+
+        // ═══════════════════════════════════════
+        // 5. COUNTDOWN TIMER
+        // ═══════════════════════════════════════
+        const eventDate = new Date('2026-03-12T07:00:00+05:30').getTime();
+
+        function updateCountdown() {
+            const now = Date.now();
+            const diff = eventDate - now;
+
+            if (diff <= 0) {
+                document.getElementById('countdown').innerHTML = '<p style="color: var(--gold-bright); font-family: var(--font-heading); font-size: 1.2rem;">🎉 The celebration is LIVE! 🎉</p>';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+            document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+            document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // ═══════════════════════════════════════
+        // 6. AUTO-STOP CONFETTI AFTER 5 SECONDS
+        // ═══════════════════════════════════════
+        setTimeout(() => {
+            confettiParticles.forEach(p => { p.speedY = 0; p.speedX = 0; });
+            // Gradually fade out
+            let fadeOut = setInterval(() => {
+                confettiParticles.forEach(p => { p.opacity -= 0.02; });
+                if (confettiParticles[0].opacity <= 0) {
+                    clearInterval(fadeOut);
+                    confettiParticles = [];
+                }
+            }, 50);
+        }, 5000);
+
+        // ═══════════════════════════════════════
+        // 7. AUTO-SCROLL TO SECTION IF HASH
+        // ═══════════════════════════════════════
+        if (window.location.hash) {
+            const target = document.querySelector(window.location.hash);
+            if (target) {
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    const type = target.dataset.type;
+                    if (type) {
+                        document.querySelectorAll('.tab-btn').forEach(b => {
+                            b.classList.toggle('active', b.dataset.category === type);
+                        });
+                    }
+                }, 300);
+            }
+        }
+    </script>
+</body>
+
+</html>
