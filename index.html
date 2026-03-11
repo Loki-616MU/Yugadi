@@ -272,6 +272,30 @@
             color: var(--white-50);
         }
 
+        .category-image-wrapper {
+            margin-bottom: 2rem;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--white-10);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            width: 100%;
+            aspect-ratio: 21 / 9;
+            max-height: 400px;
+        }
+
+        .category-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.7s var(--ease-smooth);
+        }
+
+        .category-image-wrapper:hover .category-image {
+            transform: scale(1.05);
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -296,6 +320,10 @@
             .tab-btn {
                 font-size: 0.65rem;
                 padding: 6px 14px;
+            }
+
+            .category-image-wrapper {
+                aspect-ratio: 16 / 9;
             }
         }
     </style>
@@ -329,6 +357,9 @@
                 <span class="category-icon">🌅</span>
                 <h2 class="category-title">Morning Events</h2>
             </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_morning.png" alt="Morning Events" class="category-image">
+            </div>
             <div class="event-list">
                 <div class="event-item">
                     <span class="event-date">March 12, 2026</span>
@@ -356,6 +387,9 @@
             <div class="category-header">
                 <span class="category-icon">🎯</span>
                 <h2 class="category-title">Arts & Games</h2>
+            </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_games.png" alt="Arts & Games" class="category-image">
             </div>
             <div class="event-list">
                 <div class="event-item">
@@ -434,6 +468,9 @@
                 <span class="category-icon">🎭</span>
                 <h2 class="category-title">Cultural & Stage</h2>
             </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_cultural.png" alt="Cultural & Stage" class="category-image">
+            </div>
             <div class="event-list">
                 <div class="event-item">
                     <span class="event-date">March 12, 2026</span>
@@ -469,6 +506,9 @@
                 <span class="category-icon">🎪</span>
                 <h2 class="category-title">Stalls & Food</h2>
             </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_stalls.png" alt="Stalls & Food" class="category-image">
+            </div>
             <div class="event-list">
                 <div class="event-item">
                     <span class="event-date">March 12, 2026</span>
@@ -491,6 +531,9 @@
             <div class="category-header">
                 <span class="category-icon">🌙</span>
                 <h2 class="category-title">Night Events</h2>
+            </div>
+            <div class="category-image-wrapper">
+                <img src="images/ugadi_night.png" alt="Night Events" class="category-image">
             </div>
             <div class="event-list">
                 <div class="event-item">
